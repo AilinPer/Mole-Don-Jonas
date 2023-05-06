@@ -1,0 +1,328 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+}
+
+h1 { font-size: 3.5em;}
+h2 { font-size: 2.7em;}
+h3 { font-size: 2em;}
+p { font-size: 1.25em;}
+ul { font-size: 1.7em;}
+li { font-size: 1.25em;}
+
+button{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(0,0, 0, 0.3);
+    box-shadow: 2px 2px 10px rgba(0,0, 0, 0.5);
+    color: white;
+    background-color: blueviolet;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+button:hover{
+    background-color: rgb(101, 33,165);
+    box-shadow: 2px 2px 5px;
+}
+
+.container{
+    max-width: 1800px;
+    margin: auto;
+}
+
+.color-acento { color: rgb(116, 67, 5);}
+
+header{
+    background-color: burlywood;
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: brown;
+    font-size: 2em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color:white;
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ) ,url("./img/pollo-mole.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+}
+
+#hero h1{
+    color: white;
+
+}
+
+#historiamole .container{
+    text-align: center;
+    padding: 120px 12px;
+}
+
+#Mision-vision{
+    background-color: rgb(121, 69, 2);
+    color: white;
+    text-align: center;
+}
+
+#Mision-vision .container{
+    padding: 150px 12px;
+}
+
+#Mision-vision h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#Mision-vision p{
+    display: none;
+} 
+
+#Mision-vision .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 30px;
+    border-radius: 15px;
+}
+
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ) 
+    ,url("./img/mision.jpg");
+} 
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ) 
+    ,url("./img/vision.jpg");
+}
+
+#caracteristicas .container{
+    text-align: center;
+    padding: 100px 12px;
+}
+#caracteristicas .titulo-prod{
+    text-align: center;
+    font-size: 1.5em;
+    color: rgb(99, 54, 3);
+}
+#caracteristicas li{
+    margin: 16px 0px;
+    font-weight: bold;
+    text-decoration:dotted;
+}
+#caracteristicas li:hover{
+    color:rgb(165, 42, 42) ;
+}
+
+footer{
+    background-color: rgb(230, 230, 230);
+}
+
+footer #titulo-footer{
+    text-align: center;
+    color: brown;
+    padding-top: 5%;
+    font-size: 1.5em;
+}
+footer .formulario{
+        background-color: #f2f2f2;
+        padding: 50px;
+        border-radius: 5px;
+        max-width: 500px;
+        margin: auto;
+}
+
+footer .formulario label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+    
+input[type="text"], input[type="email"], textarea {
+    padding: 10px;
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 16px;
+    box-sizing: border-box;
+    }
+    
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+    
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+    
+
+footer p{
+    margin:0;
+    color:rgb(100, 100,100);
+}
+
+footer  .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media (min-width:720px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+    header.container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #hero h1{
+        font-size: 5em;
+    }
+
+    #historiamole .container{
+        display: flex;
+        justify-content: center;
+    }
+
+    #historiamole .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: justify;
+        padding: 50px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #historiamole h2{
+        margin-top: 0px;
+    }
+
+    #historiamole .img-container{
+        background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ) ,url("./img/PueblaDos22.jpeg");
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 600px;
+    }
+
+    #Mision-vision .cursos{
+        display: flex;
+        justify-content: center;
+    }
+
+    #Mision-vision p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #Mision-vision h3{
+        margin-top: 0;
+    }
+
+    #Mision-vision .carta{
+        padding: 15px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.349);
+    }
+
+    #caracteristicas{
+        background-image: url("./img/tipos-de-mole-oaxaca.jpg");
+        background-repeat: no-repeat;
+        background-size: 500px 300px;
+        background-position: calc(150vw - 400vw) 150px;
+    }
+
+    #caracteristicas .container{
+        text-align: initial;
+    }
+
+    #caracteristicas ul{
+        margin-left: 100px;
+        text-decoration: none;
+    }
+
+    footer .container{
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width: 1200px){
+    #caracteristicas{
+        background-position-x: calc(100vw - 800px) ;
+    }
+}
